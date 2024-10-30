@@ -94,7 +94,7 @@ const projects = (await getCollection('work'))
                             { name: 'RestApi Test Generator', path: '/work/restapi-test-generator' },
                             { name: 'Freelancer', path: '/work/freelancer-overview' },
                         ].map((project) => (
-                            <li class="mention-card" key={project.name}>
+                            <li key={project.name}>
                                 <CallToAction href={project.path}>
                                     <p>{project.name}</p>
                                 </CallToAction>
