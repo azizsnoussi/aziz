@@ -11,7 +11,6 @@ import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
-import { Link } from 'astro:link';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
@@ -96,9 +95,9 @@ const projects = (await getCollection('work'))
                             { name: 'Freelancer', path: '/work/freelancer-overview' },
                         ].map((project) => (
                             <li class="mention-card" key={project.name}>
-                                <Link to={project.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                <CallToAction href={project.path}>
                                     <p>{project.name}</p>
-                                </Link>
+                                </CallToAction>
                             </li>
                         ))}
                     </Grid>
